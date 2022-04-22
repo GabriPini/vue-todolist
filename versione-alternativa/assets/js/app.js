@@ -60,6 +60,7 @@ const app = new Vue({
             if ( this.tasks[index].trashed != true ){
                 
                 this.tasks[index].trashed = true;
+                this.tasks[index].done = false;
                            
             } else{
         
@@ -73,6 +74,7 @@ const app = new Vue({
             if ( this.tasks[index].done != true ){
                 
                 this.tasks[index].done = true;
+                this.tasks[index].trashed = false;
                            
             } else{
         
