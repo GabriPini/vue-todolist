@@ -52,7 +52,7 @@
                     </section>
 
                     <section v-if="tasks.length > 0" class=" mt-4 pt-4 bg-light text-dark rounded_my">
-                        <h2 class="px-4 fw-bold">Trashed <button @click="removeTask(index)">(Empty bin)</button></h2>
+                        <h2 class="px-4 fw-bold">Trashed <button class="border-0 bg-transparent text-danger" @click="removeTask(index)">(Empty bin)</button></h2>
                         <ul class="fs-5 pt-3">
                             <li v-for="(task, index) in tasks" v-if="task.trashed === true" >
                                 <span > {{task.text}}</span>

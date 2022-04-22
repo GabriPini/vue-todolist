@@ -48,7 +48,11 @@ const app = new Vue({
         
         
         removeTask(i){
-            this.tasks.splice(i, 1)
+                if(this.tasks.trashed = true){
+                this.tasks.splice(i, 1)
+                 }
+                           
+            
         },
 
         trashedTask(index){
