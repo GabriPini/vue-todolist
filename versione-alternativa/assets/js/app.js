@@ -28,18 +28,18 @@ const app = new Vue({
             trashed: false,
             },
             
-        ]
+        ],
     },
-
     methods:{
-   
+        
         addTask(){
             let newObj = {
                 text : this.newTask,
                 done : false,
+                trashed: false,
             }
             if(newObj.text.length>0){
-					
+                
                 this.tasks.push(newObj);
                 
             }
@@ -47,17 +47,16 @@ const app = new Vue({
         },
         
         
+        
         removeTask(i){
-                if(this.tasks.trashed = true){
-                this.tasks.splice(i, 1)
-                 }
-                           
+                this.tasks.splice(i, 1)    
             
         },
 
         trashedTask(index){
             
             if ( this.tasks[index].trashed != true ){
+            
                 
                 this.tasks[index].trashed = true;
                 this.tasks[index].done = false;
@@ -85,3 +84,4 @@ const app = new Vue({
         },
     },
 })
+
